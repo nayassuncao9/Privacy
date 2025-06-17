@@ -1,200 +1,273 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profile Clone</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nayara Assuncao - Privacy</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f5f5f5;
+    * {
+      box-sizing: border-box;
     }
+
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: #fff;
+      color: #333;
+    }
+
+    /* TOPO COM NOME + IMAGEM */
     .topbar {
-      background: white;
       display: flex;
       align-items: center;
-      padding: 10px 20px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      justify-content: space-between;
+      padding: 12px 16px;
+      border-bottom: 1px solid #eee;
     }
-    .topbar img {
-      width: 40px;
-      height: 40px;
+
+    .topbar-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .topbar-left img {
+      width: 28px;
+      height: 28px;
       border-radius: 50%;
-      margin-right: 10px;
     }
-    .topbar h1 {
-      font-size: 20px;
-      margin: 0;
+
+    .topbar-left span {
+      font-weight: bold;
+      font-size: 18px;
+      color: #222;
     }
-    .card {
-      max-width: 400px;
-      margin: 20px auto;
-      border-radius: 15px;
-      background: white;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
+
+    .topbar-right img {
+      width: 22px;
+      opacity: 0.6;
     }
-    .header {
-      background: linear-gradient(90deg, #ff7b00, #ff33aa);
-      height: 120px;
+
+    .banner {
       position: relative;
+      height: 200px;
+      background: url('https://i.postimg.cc/YCYrVZx7/xcg4uu.jpg') center/cover no-repeat;
     }
+
     .profile-pic {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background: white;
       position: absolute;
       bottom: -40px;
       left: 20px;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid white;
       overflow: hidden;
     }
+
     .profile-pic img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
-    .info {
-      padding: 60px 20px 20px;
+
+    .profile-info {
+      padding: 60px 20px 10px;
     }
-    .info h2 {
+
+    .profile-info h2 {
       margin: 0;
+      font-size: 20px;
     }
-    .info p {
+
+    .verified {
+      color: #ff7b00;
+    }
+
+    .profile-info p {
+      margin: 5px 0;
       color: #666;
     }
-    .buttons a {
-      display: block;
-      text-decoration: none;
-    }
-    .buttons button {
-      display: block;
-      width: 100%;
-      margin: 10px 0;
-      padding: 12px;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-      font-weight: bold;
-      color: white;
-      cursor: pointer;
-    }
-    .subscribe { background: #ff7b00; }
-    .tip { background: #ff3d3d; color: #ffffff; }
-    .bundle { background: #aa66cc; }
 
-    .gallery {
-      max-width: 400px;
-      margin: 20px auto;
-      text-align: center;
+    .insta-button {
+      display: inline-block;
+      border: 1px solid #ccc;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+      text-decoration: none;
+      color: #333;
+      margin-top: 5px;
     }
-    .stats {
+
+    .stats-bar {
       display: flex;
       justify-content: space-around;
-      padding: 10px;
-      font-weight: bold;
-    }
-    .thumbnails {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      padding: 10px;
-    }
-    .thumbnail {
-      aspect-ratio: 1 / 1;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-    .thumbnail img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 10px;
+      padding: 10px 0;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+      font-size: 14px;
+      color: #555;
     }
 
-    footer {
-      max-width: 400px;
-      margin: 40px auto;
-      font-size: 12px;
-      text-align: center;
-      color: #777;
-      padding: 10px;
-    }
-    footer .links {
+    .stats-bar span {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin: 10px 0;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .plan-section {
+      padding: 20px;
+    }
+
+    .section-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .plan {
+      background: linear-gradient(90deg, #ff9472, #f2709c);
+      color: white;
+      border-radius: 40px;
+      padding: 15px 20px;
+      font-weight: bold;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 15px;
+      text-decoration: none;
+    }
+
+    .tabs {
+      display: flex;
+      border-top: 1px solid #eee;
+      border-bottom: 2px solid #eee;
+    }
+
+    .tab {
+      flex: 1;
+      text-align: center;
+      padding: 12px 0;
+      font-weight: bold;
+      color: #777;
+    }
+
+    .tab.active {
+      color: #ff5e62;
+      border-bottom: 3px solid #ff5e62;
+      background: #ffeae8;
+    }
+
+    .locked-content {
+      text-align: center;
+      padding: 40px 20px;
+      background: #fdf7f4;
+    }
+
+    .locked-content img {
+      width: 40px;
+      margin-bottom: 15px;
+    }
+
+    .footer-nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px 0;
+      border-top: 1px solid #eee;
+      font-size: 14px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: white;
+      z-index: 100;
+    }
+
+    .footer-nav span {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #777;
+      font-size: 12px;
+    }
+
+    .footer-nav img {
+      width: 20px;
+      height: 20px;
+      margin-bottom: 3px;
+      opacity: 0.7;
     }
   </style>
 </head>
 <body>
 
+  <!-- TOPO COM LOGO + NOME "PRIVACY" -->
   <div class="topbar">
-    <img src="https://i.postimg.cc/pyNNJV4F/logo-privacy-A7-Kz-G1.png" alt="Topbar Icon">
-    <h1>Privacy</h1>
+    <div class="topbar-left">
+      <img src="https://i.postimg.cc/pyNNJV4F/logo-privacy-A7-Kz-G1.png" alt="Logo">
+      <span>PRIVACY</span>
+    </div>
+    <div class="topbar-right"></div>
   </div>
 
-  <div class="card">
-    <div class="header">
-      <div class="profile-pic">
-        <img src="https://i.postimg.cc/YCYrVZx7/xcg4uu.jpg" alt="Profile Picture">
-      </div>
-    </div>
-    <div class="info">
-      <h2>Nayara Assuncao</h2>
-      <p>@Nayassuncao9</p>
-      <p>Você já me imaginou assim? Agora pode ver de verdade. 😈 💕</p>
-      <div class="buttons">
-        <a href="https://app.pushinpay.com.br/service/pay/9F2BE24E-3AEC-4897-890D-60096865160C" target="_blank">
-          <button class="subscribe">SEMANAL - R$18.99</button>
-        </a>
-        <a href="https://app.pushinpay.com.br/service/pay/9F2BE2A3-3FFB-43E4-B043-EBEEB3416390" target="_blank">
-          <button class="tip">EU E MEU PRIMO - R$49.90</button>
-        </a>
-        <a href="https://app.pushinpay.com.br/service/pay/9F2BE2E7-879D-4A0B-AEB6-E7CF18612970" target="_blank">
-          <button class="bundle">VITALICIO - R$99.99</button>
-        </a>
-      </div>
+  <!-- Banner -->
+  <div class="banner">
+    <div class="profile-pic">
+      <img src="https://i.postimg.cc/YCYrVZx7/xcg4uu.jpg" alt="Nayara">
     </div>
   </div>
 
-  <div class="gallery">
-    <div class="stats">
-      <div>300<br><span style="font-weight:normal;">Photos</span></div>
-      <div>1.200<br><span style="font-weight:normal;">Videos</span></div>
-      <div>56k<br><span style="font-weight:normal;">Likes</span></div>
-    </div>
-    <div class="thumbnails">
-      <div class="thumbnail"><img src="https://i.postimg.cc/5tGM2mgg/Air-Brush-20250616122411.jpg" alt="Image 1"></div>
-      <div class="thumbnail"><img src="https://i.postimg.cc/SxTBgGB4/Air-Brush-20250616122334.jpg" alt="Image 2"></div>
-      <div class="thumbnail"><img src="https://i.postimg.cc/wjy2dctg/Air-Brush-20250616122752.jpg" alt="Image 3"></div>
-      <div class="thumbnail"><img src="https://i.postimg.cc/sfT4Q073/Air-Brush-20250616122617.jpg" alt="Image 4"></div>
-      <div class="thumbnail"><img src="https://i.postimg.cc/L55f32L2/Air-Brush-20250616122952.jpg" alt="Image 5"></div>
-      <div class="thumbnail"><img src="https://i.postimg.cc/cLygrQ9s/Air-Brush-20250616123111.jpg" alt="Image 6"></div>
-    </div>
+  <!-- Info -->
+  <div class="profile-info">
+    <h2>Nayara Assuncao <span class="verified">✔️</span></h2>
+    <p>@Nayassuncao9</p>
+    <p>Você já me imaginou assim? Agora pode ver de verdade. 😈 💕</p>
+    <a href="https://instagram.com" class="insta-button">📷 Instagram</a>
   </div>
 
-  <footer>
-    <div>
-      © 2025 Privacy
+  <!-- Estatísticas -->
+  <div class="stats-bar">
+    <span>📷 476</span>
+    <span>🎥 161</span>
+    <span>❤️ 3.8K</span>
+  </div>
+
+  <!-- Planos -->
+  <div class="plan-section">
+    <div class="section-title">Assinaturas</div>
+    <a href="https://app.pushinpay.com.br/service/pay/9F2BE24E-3AEC-4897-890D-60096865160C" class="plan" target="_blank">
+      1 mês <span>R$ 18,99</span>
+    </a>
+
+    <div class="section-title">Promoções</div>
+    <a href="https://app.pushinpay.com.br/service/pay/9F2BE2A3-3FFB-43E4-B043-EBEEB3416390" class="plan" target="_blank">
+      3 meses <span>R$ 49,90</span>
+    </a>
+
+    <a href="https://app.pushinpay.com.br/service/pay/9F2BE2E7-879D-4A0B-AEB6-E7CF18612970" class="plan" target="_blank">
+      6 meses <span>R$ 99,99</span>
+    </a>
+  </div>
+
+  <!-- Abas -->
+  <div class="tabs">
+    <div class="tab active">700 postagens</div>
+    <div class="tab">1.200 mídias</div>
+  </div>
+
+  <!-- Conteúdo bloqueado -->
+  <div class="locked-content">
+    <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" alt="cadeado" />
+    <p>Conteúdo disponível após assinatura</p>
+    <div class="stats-bar">
+      <span>📷 700</span>
+      <span>🎥 1.200</span>
+      <span>❤️ 58.8K</span>
     </div>
-    <div class="links">
-      <div>About</div>
-      <div>Contact Us</div>
-      <div>Help & FAQ</div>
-      <div>Privacy</div>
-      <div>Terms and Policies</div>
-      <div>Blog</div>
-      <div>How It Works</div>
-    </div>
-    <div style="margin-top:10px;">
-      ORANGE SEA CORP, 80 main street, Po BOX 3200, Road Town,<br>
-      Tortola VG1110, Ilhas Virgens Britânicas
-    </div>
-  </footer>
+  </div>
 
 </body>
 </html>
