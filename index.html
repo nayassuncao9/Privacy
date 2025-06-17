@@ -78,6 +78,32 @@
     .profile-info h2 {
       margin: 0;
       font-size: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Selo verificado estilo losango azul com check */
+    .selo-verificado {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      background: #007BFF; /* azul */
+      clip-path: polygon(
+        50% 0%, 
+        90% 25%, 
+        90% 75%, 
+        50% 100%, 
+        10% 75%, 
+        10% 25%
+      ); /* losango */
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      box-shadow: 0 0 3px rgba(0,0,0,0.3);
+      flex-shrink: 0;
     }
 
     .verified {
@@ -222,17 +248,13 @@
 
   <!-- Info -->
   <div class="profile-info">
-    <h2>Nayara Assuncao <span class="verified">✔️</span></h2>
+    <h2>
+      Nayara Assuncao 
+      <span class="selo-verificado">✔️</span>
+    </h2>
     <p>@Nayassuncao9</p>
     <p>Você já me imaginou assim? Agora pode ver de verdade. 😈 💕</p>
     <a href="https://instagram.com" class="insta-button">📷 Instagram</a>
-  </div>
-
-  <!-- Estatísticas -->
-  <div class="stats-bar">
-    <span>📷 700</span>
-    <span>🎥 1.200</span>
-    <span>❤️ 58.8K</span>
   </div>
 
   <!-- Planos -->
