@@ -16,7 +16,6 @@
       color: #333;
     }
 
-    /* TOPO COM NOME + IMAGEM */
     .topbar {
       display: flex;
       align-items: center;
@@ -41,11 +40,6 @@
       font-weight: bold;
       font-size: 18px;
       color: #222;
-    }
-
-    .topbar-right img {
-      width: 22px;
-      opacity: 0.6;
     }
 
     .banner {
@@ -83,22 +77,14 @@
       gap: 8px;
     }
 
-    /* Selo verificado estilo losango azul com check */
     .selo-verificado {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       width: 24px;
       height: 24px;
-      background: #007BFF; /* azul */
-      clip-path: polygon(
-        50% 0%, 
-        90% 25%, 
-        90% 75%, 
-        50% 100%, 
-        10% 75%, 
-        10% 25%
-      ); /* losango */
+      background: #007BFF;
+      clip-path: polygon(50% 0%, 90% 25%, 90% 75%, 50% 100%, 10% 75%, 10% 25%);
       color: white;
       font-weight: bold;
       font-size: 16px;
@@ -163,7 +149,9 @@
       justify-content: space-between;
       align-items: center;
       font-size: 15px;
-      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      width: 100%;
     }
 
     .tabs {
@@ -197,56 +185,118 @@
       margin-bottom: 15px;
     }
 
-    .footer-nav {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      padding: 10px 0;
-      border-top: 1px solid #eee;
-      font-size: 14px;
+    /* POP-UP */
+    #popup {
+      display: none;
       position: fixed;
-      bottom: 0;
-      left: 0;
+      top: 0; left: 0;
       width: 100%;
-      background: white;
-      z-index: 100;
-    }
-
-    .footer-nav span {
-      display: flex;
-      flex-direction: column;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      z-index: 9999;
       align-items: center;
-      color: #777;
-      font-size: 12px;
+      justify-content: center;
     }
 
-    .footer-nav img {
-      width: 20px;
-      height: 20px;
-      margin-bottom: 3px;
-      opacity: 0.7;
+    .popup-content {
+      background: white;
+      width: 90%;
+      max-width: 400px;
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      text-align: center;
+      padding: 0;
+    }
+
+    .popup-banner img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .popup-profile-pic {
+      position: absolute;
+      top: 110px;
+      left: 16px;
+      width: 70px;
+      height: 70px;
+      border: 3px solid white;
+      border-radius: 50%;
+      overflow: hidden;
+      background: white;
+    }
+
+    .popup-profile-pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .popup-info {
+      padding: 60px 20px 20px;
+    }
+
+    .popup-info h2 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    .popup-preco {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 8px 0;
+    }
+
+    .popup-desc {
+      margin-bottom: 16px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .popup-pix {
+      background: #f1f1f1;
+      padding: 10px;
+      border-radius: 10px;
+      word-break: break-word;
+      margin-bottom: 12px;
+    }
+
+    .popup-content button {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(to right, #ff7e5f, #ff9966);
+      color: white;
+      border: none;
+      border-radius: 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .popup-content .close {
+      position: absolute;
+      top: 10px;
+      right: 16px;
+      font-size: 20px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
 
-  <!-- TOPO COM LOGO + NOME "PRIVACY" -->
   <div class="topbar">
     <div class="topbar-left">
       <img src="https://i.postimg.cc/pyNNJV4F/logo-privacy-A7-Kz-G1.png" alt="Logo">
       <span>PRIVACY</span>
     </div>
-    <div class="topbar-right"></div>
   </div>
 
-  <!-- Banner -->
   <div class="banner">
     <div class="profile-pic">
       <img src="https://i.postimg.cc/YCYrVZx7/xcg4uu.jpg" alt="Nayara">
     </div>
   </div>
 
-  <!-- Info -->
   <div class="profile-info">
     <h2>
       Nayara Assuncao 
@@ -257,30 +307,20 @@
     <a href="https://instagram.com" class="insta-button">📷 Instagram</a>
   </div>
 
-  <!-- Planos -->
   <div class="plan-section">
     <div class="section-title">Assinaturas</div>
-    <a href="https://app.pushinpay.com.br/service/pay/9F2BE24E-3AEC-4897-890D-60096865160C" class="plan" target="_blank">
-      1 semana <span>R$ 18,99</span>
-    </a>
+    <button class="plan" onclick="abrirPopup('1 semana', 'R$ 18,99')">1 semana <span>R$ 18,99</span></button>
 
     <div class="section-title">Promoções</div>
-    <a href="https://app.pushinpay.com.br/service/pay/9F2BE2A3-3FFB-43E4-B043-EBEEB3416390" class="plan" target="_blank">
-      1 mês <span>R$ 49,90</span>
-    </a>
-
-    <a href="https://app.pushinpay.com.br/service/pay/9F2BE2E7-879D-4A0B-AEB6-E7CF18612970" class="plan" target="_blank">
-      3 meses <span>R$ 99,99</span>
-    </a>
+    <button class="plan" onclick="abrirPopup('1 mês', 'R$ 49,90')">1 mês <span>R$ 49,90</span></button>
+    <button class="plan" onclick="abrirPopup('3 meses', 'R$ 99,99')">3 meses <span>R$ 99,99</span></button>
   </div>
 
-  <!-- Abas -->
   <div class="tabs">
     <div class="tab active">700 postagens</div>
     <div class="tab">1.200 mídias</div>
   </div>
 
-  <!-- Conteúdo bloqueado -->
   <div class="locked-content">
     <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" alt="cadeado" />
     <p>Conteúdo disponível após assinatura</p>
@@ -290,6 +330,64 @@
       <span>❤️ 58.8K</span>
     </div>
   </div>
+
+  <!-- POP-UP -->
+  <div id="popup">
+    <div class="popup-content">
+      <span class="close" onclick="fecharPopup()">×</span>
+
+      <div class="popup-banner">
+        <img src="https://i.postimg.cc/YCYrVZx7/xcg4uu.jpg" alt="Banner">
+      </div>
+
+      <div class="popup-profile-pic">
+        <img src="https://i.postimg.cc/YCYrVZx7/xcg4uu.jpg" alt="Perfil">
+      </div>
+
+      <div class="popup-info">
+        <h2 id="popupTitulo">Assinatura</h2>
+        <p class="popup-preco" id="popupValor">R$ 00,00</p>
+        <p class="popup-desc">Acesse conteúdos exclusivos da criadora</p>
+        <div class="popup-pix" id="chavePix"></div>
+        <button onclick="copiarPix()">Copiar chave Pix</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPT -->
+  <script>
+    function abrirPopup(plano, valor) {
+      document.getElementById('popup').style.display = 'flex';
+      document.getElementById('popupTitulo').innerText = plano;
+      document.getElementById('popupValor').innerText = valor;
+    }
+
+    function fecharPopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
+
+    function copiarPix() {
+      const chave = document.getElementById("chavePix").innerText;
+      const plano = document.getElementById("popupTitulo").innerText;
+
+      navigator.clipboard.writeText(chave).then(() => {
+      
+
+        // Redirecionamento conforme o plano
+        let linkCheckout = "#";
+
+        if (plano.includes("1 semana")) {
+          linkCheckout = "https://app.pushinpay.com.br/service/pay/9F2BE24E-3AEC-4897-890D-60096865160C";
+        } else if (plano.includes("1 mês")) {
+          linkCheckout = "https://app.pushinpay.com.br/service/pay/9F2BE2A3-3FFB-43E4-B043-EBEEB3416390";
+        } else if (plano.includes("3 meses")) {
+          linkCheckout = "https://app.pushinpay.com.br/service/pay/9F2BE2E7-879D-4A0B-AEB6-E7CF18612970";
+        }
+
+        window.location.href = linkCheckout;
+      });
+    }
+  </script>
 
 </body>
 </html>
