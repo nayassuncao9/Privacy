@@ -309,7 +309,7 @@
 
   <div class="plan-section">
     <div class="section-title">Assinaturas</div>
-    <button class="plan" onclick="abrirPopup('1 mês', 'R$ 29,90')">1 mês <span>R$ 29,90</span></button>
+    <button class="plan" onclick="abrirPopup('1 semana', 'R$ 19,90')">1 semana <span>R$ 19,90</span></button>
 
     <div class="section-title">Promoções</div>
     <button class="plan" onclick="abrirPopup('2 mês', 'R$ 49,90')">2 mês <span>R$ 49,90</span></button>
@@ -379,8 +379,8 @@
         // Redirecionamento conforme o plano
         let linkCheckout = "#";
 
-        if (plano.includes("1 mês")) {
-          linkCheckout = "https://app.pushinpay.com.br/service/pay/9F2E2D32-B36B-435A-9351-99F06618FB13";
+        if (plano.includes("1 semana")) {
+          linkCheckout = "https://app.pushinpay.com.br/service/pay/9F2E3E26-5CCC-4526-9EA2-F03F0B3696F6";
         } else if (plano.includes("2 mês")) {
           linkCheckout = "https://app.pushinpay.com.br/service/pay/9F2BE2A3-3FFB-43E4-B043-EBEEB3416390";
         } else if (plano.includes("5 meses")) {
