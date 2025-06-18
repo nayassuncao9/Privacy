@@ -309,11 +309,11 @@
 
   <div class="plan-section">
     <div class="section-title">Assinaturas</div>
-    <button class="plan" onclick="abrirPopup('1 semana', 'R$ 18,99')">1 semana <span>R$ 18,99</span></button>
+    <button class="plan" onclick="abrirPopup('1 mês', 'R$ 29,90')">1 mês <span>R$ 29,90</span></button>
 
     <div class="section-title">Promoções</div>
-    <button class="plan" onclick="abrirPopup('1 mês', 'R$ 49,90')">1 mês <span>R$ 49,90</span></button>
-    <button class="plan" onclick="abrirPopup('3 meses', 'R$ 99,99')">3 meses <span>R$ 99,99</span></button>
+    <button class="plan" onclick="abrirPopup('2 mês', 'R$ 49,90')">2 mês <span>R$ 49,90</span></button>
+    <button class="plan" onclick="abrirPopup('5 meses', 'R$ 99,99')">5 meses <span>R$ 99,99</span></button>
   </div>
 
   <div class="tabs">
@@ -379,11 +379,11 @@
         // Redirecionamento conforme o plano
         let linkCheckout = "#";
 
-        if (plano.includes("1 semana")) {
-          linkCheckout = "https://app.pushinpay.com.br/service/pay/9F2BE24E-3AEC-4897-890D-60096865160C";
-        } else if (plano.includes("1 mês")) {
+        if (plano.includes("1 mês")) {
+          linkCheckout = "https://app.pushinpay.com.br/service/pay/9F2E2D32-B36B-435A-9351-99F06618FB13";
+        } else if (plano.includes("2 mês")) {
           linkCheckout = "https://app.pushinpay.com.br/service/pay/9F2BE2A3-3FFB-43E4-B043-EBEEB3416390";
-        } else if (plano.includes("3 meses")) {
+        } else if (plano.includes("5 meses")) {
           linkCheckout = "https://app.pushinpay.com.br/service/pay/9F2BE2E7-879D-4A0B-AEB6-E7CF18612970";
         }
 
