@@ -2,392 +2,721 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nayara Assuncao - Privacy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
   <style>
-    * {
-      box-sizing: border-box;
-    }
+  .aba-midia {
+    display: none;
+    animation: deslizar 0.4s ease forwards;
+  }
 
+  @keyframes deslizar {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .midia-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .midia-item {
+    background-color: #f5ede3;
+    border-radius: 10px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .midia-item img {
+    width: 30px;
+    opacity: 0.5;
+  }
     body {
       margin: 0;
-      font-family: 'Arial', sans-serif;
-      background: #fff;
-      color: #333;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: #fff;
     }
 
-    .topbar {
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 20px;
+      background-color: #000;
+    }
+
+    .header-icons {
+      display: flex;
+      gap: 12px;
+    }
+
+    .header-icons i {
+      font-size: 22px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .header .logo {
+      height: 40px;
+      cursor: pointer;
+    }
+
+    .header i {
+      font-size: 24px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .top-bar {
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 12px 16px;
-      border-bottom: 1px solid #eee;
-    }
-
-    .topbar-left {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .topbar-left img {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-    }
-
-    .topbar-left span {
-      font-weight: bold;
       font-size: 18px;
-      color: #222;
+      font-weight: bold;
+      background-color: #000;
     }
 
-    .banner {
+    .top-bar i {
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    .profile-bubble {
+      background-color: #111;
+      margin: 20px 15px 25px;
+      padding: 0;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+      overflow: visible;
       position: relative;
-      height: 200px;
-      background: url('https://i.postimg.cc/YCYrVZx7/xcg4uu.jpg') center/cover no-repeat;
+    }
+
+    .cover {
+      width: 100%;
+      height: 90px;
+      background-image: url('https://i.postimg.cc/L5YMnP4m/IMG-20250807-031913.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
     }
 
     .profile-pic {
-      position: absolute;
-      bottom: -40px;
-      left: 20px;
-      width: 80px;
-      height: 80px;
+      width: 70px;
+      height: 70px;
       border-radius: 50%;
-      border: 3px solid white;
-      overflow: hidden;
+      border: 3px solid #000;
+      position: absolute;
+      bottom: -35px;
+      left: 15px;
+      background-image: url('https://i.postimg.cc/yxQkzcQB/7j9nkm.jpg');
+      background-size: cover;
+      background-position: center;
+      z-index: 10;
+      box-shadow: 0 0 8px rgba(255,255,255,0.3);
     }
 
-    .profile-pic img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .stats-inline {
+      position: absolute;
+      bottom: -30px;
+      left: 125px;
+      display: flex;
+      gap: 12px;
+      font-size: 13px;
+      z-index: 10;
     }
 
-    .profile-info {
-      padding: 60px 20px 10px;
-    }
-
-    .profile-info h2 {
-      margin: 0;
-      font-size: 20px;
+    .stats-inline div {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 3px;
     }
 
-    .selo-verificado {
+    .info {
+      padding: 50px 15px 15px;
+      text-align: left;
+      margin-left: 15px;
+    }
+
+    .name {
+      font-size: 18px;
+      font-weight: bold;
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      width: 24px;
-      height: 24px;
-      background: #007BFF;
-      clip-path: polygon(50% 0%, 90% 25%, 90% 75%, 50% 100%, 10% 75%, 10% 25%);
-      color: white;
-      font-weight: bold;
-      font-size: 16px;
-      box-shadow: 0 0 3px rgba(0,0,0,0.3);
-      flex-shrink: 0;
-    }
-
-    .verified {
-      color: #ff7b00;
-    }
-
-    .profile-info p {
-      margin: 5px 0;
-      color: #666;
-    }
-
-    .insta-button {
-      display: inline-block;
-      border: 1px solid #ccc;
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 14px;
-      text-decoration: none;
-      color: #333;
-      margin-top: 5px;
-    }
-
-    .stats-bar {
-      display: flex;
-      justify-content: space-around;
-      padding: 10px 0;
-      border-top: 1px solid #eee;
-      border-bottom: 1px solid #eee;
-      font-size: 14px;
-      color: #555;
-    }
-
-    .stats-bar span {
-      display: flex;
-      align-items: center;
       gap: 5px;
+      margin-bottom: 5px;
     }
 
-    .plan-section {
-      padding: 20px;
+    .name i {
+      color: orange;
     }
 
-    .section-title {
-      font-weight: bold;
-      margin-bottom: 10px;
-      font-size: 16px;
-    }
-
-    .plan {
-      background: linear-gradient(90deg, #ff9472, #f2709c);
-      color: white;
-      border-radius: 40px;
-      padding: 15px 20px;
-      font-weight: bold;
-      margin-bottom: 12px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 15px;
-      border: none;
-      cursor: pointer;
-      width: 100%;
-    }
-
-    .tabs {
-      display: flex;
-      border-top: 1px solid #eee;
-      border-bottom: 2px solid #eee;
-    }
-
-    .tab {
-      flex: 1;
-      text-align: center;
-      padding: 12px 0;
-      font-weight: bold;
-      color: #777;
-    }
-
-    .tab.active {
-      color: #ff5e62;
-      border-bottom: 3px solid #ff5e62;
-      background: #ffeae8;
-    }
-
-    .locked-content {
-      text-align: center;
-      padding: 40px 20px;
-      background: #fdf7f4;
-    }
-
-    .locked-content img {
-      width: 40px;
+    .username {
+      color: #aaa;
+      font-size: 14px;
       margin-bottom: 15px;
     }
 
-    /* POP-UP */
-    #popup {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
+    .bio {
+      font-size: 14px;
+      line-height: 1.4;
+      color: #ddd;
+      margin-bottom: 15px;
+      max-width: 90%;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .social-icons i {
+      background: #222;
+      padding: 10px;
+      border-radius: 50%;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .social-icons i:hover {
+      background: #ff944d;
+      color: #000;
+    }
+
+    .plans {
+      padding: 20px 15px;
+      border-top: 1px solid #222;
+    }
+
+    .plans h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .plan-btn {
+      background: linear-gradient(90deg, #fbc4a0, #fdb58d);
+      color: #000;
+      padding: 12px;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 15px;
+      margin-bottom: 10px;
       width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.6);
-      z-index: 9999;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    .plan-btn:hover {
+      filter: brightness(1.1);
+    }
+
+    .profile-tabs-bottom {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #111;
+      border-radius: 20px;
+      padding: 12px;
+      margin: 20px 15px;
+      border: 1px solid #222;
+    }
+
+    .profile-tabs-bottom .tab {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #fff;
+      font-size: 14px;
+      padding: 8px 12px;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .profile-tabs-bottom .tab.active {
+      color: #ff944d;
+      border-bottom: 2px solid #ff944d;
+    }
+
+    .footer-nav-wrapper {
+      position: fixed;
+      bottom: 10px;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      pointer-events: none;
+      z-index: 1000;
+    }
+
+    .footer-nav {
+      background: #111;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 6px 10px;
+      border-radius: 30px;
+      width: 85%;
+      max-width: 340px;
+      height: 48px;
+      pointer-events: auto;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+    }
+
+    .footer-nav i {
+      font-size: 20px;
+      color: #fff;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .footer-nav .active {
+      color: #ff944d;
+    }
+
+    /* REMOVIDO O NÚMERO 2 DO CHAT */
+    .footer-nav .chat-icon::after {
+      content: none !important;
+      display: none !important;
+    }
+
+    .footer-nav {
+      display: flex;
+      justify-content: space-around;
+      background-color: #111;
+      padding: 8px 0;
+    }
+
+    .footer-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 60px;
+      font-size: 10px;
+      color: white;
+    }
+
+    .footer-item i {
+      font-size: 22px;
+    }
+
+    .footer-item span {
+      margin-top: 2px;
+      font-size: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .profile-bubble-lower {
+      background-color: #111;
+      border-radius: 20px;
+      margin: 15px auto 40px auto;
+      padding: 15px;
+      color: white;
+      font-family: sans-serif;
+      max-width: 400px;
+      box-sizing: border-box;
+    }
+
+    .midia-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .midia-quadrado {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 10px;
+      background-color: #222;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      display: flex;
       align-items: center;
       justify-content: center;
     }
 
-    .popup-content {
-      background: white;
-      width: 90%;
-      max-width: 400px;
-      border-radius: 16px;
-      overflow: hidden;
-      position: relative;
-      text-align: center;
-      padding: 0;
-    }
-
-    .popup-banner img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-    }
-
-    .popup-profile-pic {
-      position: absolute;
-      top: 110px;
-      left: 16px;
-      width: 70px;
-      height: 70px;
-      border: 3px solid white;
-      border-radius: 50%;
-      overflow: hidden;
-      background: white;
-    }
-
-    .popup-profile-pic img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .popup-info {
-      padding: 60px 20px 20px;
-    }
-
-    .popup-info h2 {
-      margin-top: 0;
-      font-size: 20px;
-    }
-
-    .popup-preco {
-      font-size: 24px;
-      font-weight: bold;
-      margin: 8px 0;
-    }
-
-    .popup-desc {
-      margin-bottom: 16px;
-      font-size: 14px;
-      color: #555;
-    }
-
-    .popup-pix {
-      background: #f1f1f1;
-      padding: 10px;
-      border-radius: 10px;
-      word-break: break-word;
-      margin-bottom: 12px;
-    }
-
-    .popup-content button {
-      width: 100%;
-      padding: 12px;
-      background: linear-gradient(to right, #ff7e5f, #ff9966);
+    .midia-quadrado .cadeado {
+      font-size: 22px;
       color: white;
-      border: none;
-      border-radius: 20px;
-      font-size: 16px;
-      cursor: pointer;
+      z-index: 2;
     }
+.profile-bubble-lower i.ri-verified-badge-fill {
+  color: orange;
+  margin-left: 5px; /* Para dar um espacinho */
+}
+  .popup-pix {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.95);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
 
-    .popup-content .close {
-      position: absolute;
-      top: 10px;
-      right: 16px;
-      font-size: 20px;
-      cursor: pointer;
-    }
+.popup-pix .bolha {
+  width: 90%;
+  max-width: 400px;
+  background-color: #111;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 20px #ff0069;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.popup-pix .banner {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  display: block;
+  position: relative;
+}
+
+.popup-pix .fechar-x {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-size: 26px;
+  cursor: pointer;
+  z-index: 10;
+  background: none;
+  border: none;
+}
+
+.popup-pix .perfil {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-top: -40px;
+  object-fit: cover;
+}
+
+.popup-pix .nome {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.popup-pix .arroba {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.popup-pix .botao {
+  padding: 12px 20px;
+  background-color: #ff0069;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  width: 80%;
+  cursor: pointer;
+  margin: 20px auto;
+}
+
+.popup-pix .botao i {
+  margin-right: 6px;
+}
+/* Popup plano (opcional, se preferir colocar aqui ao invés do inline) */
+#popupPlano {
+  /* Já está no inline, mas se preferir, pode mover para cá */
+}
+
+.popup-bubble {
+  /* já no inline */
+}
+
+/* Pode copiar os estilos inline para cá se quiser */
+
+
   </style>
 </head>
+
 <body>
-
-  <div class="topbar">
-    <div class="topbar-left">
-      <img src="https://i.postimg.cc/pyNNJV4F/logo-privacy-A7-Kz-G1.png" alt="Logo">
-      <span>PRIVACY</span>
+  
+  <div class="header">
+    <img src="https://i.postimg.cc/Qxv85zh3/Air-Brush-20250806212025.jpg" alt="Logo" class="logo" />
+    <div class="header-icons">
+      <i class="ri-search-line"></i>
+      <i class="ri-notification-3-line"></i>
     </div>
   </div>
 
-  <div class="banner">
-    <div class="profile-pic">
-      <img src="https://i.postimg.cc/YCYrVZx7/xcg4uu.jpg" alt="Nayara">
-    </div>
+  <div class="top-bar">
+    <i class="ri-arrow-left-line" style="cursor:pointer;" onclick="window.location.href='https://privacy.com.br/board';"></i>
+    <span>Nayara</span>
+    <i class="ri-more-2-fill"></i>
   </div>
 
-  <div class="profile-info">
-    <h2>
-      Nayara Assuncao 
-      <span class="selo-verificado">✔️</span>
-    </h2>
-    <p>@Nayassuncao9</p>
-    <p>Você já me imaginou assim? Agora pode ver de verdade. 😈 💕</p>
-    <a href="https://instagram.com" class="insta-button">📷 Instagram</a>
-  </div>
-
-  <div class="plan-section">
-    <div class="section-title">Assinaturas</div>
-    <button class="plan" onclick="abrirPopup('1 semana', 'R$ 19,90')">1 semana <span>R$ 19,90</span></button>
-
-    <div class="section-title">Promoções</div>
-    <button class="plan" onclick="abrirPopup('1 mês', 'R$ 49,90')">1 mês <span>R$ 49,90</span></button>
-    <button class="plan" onclick="abrirPopup('Vitalicio', 'R$ 99,99')">Vitalicio <span>R$ 99,99</span></button>
-  </div>
-
-  <div class="tabs">
-    <div class="tab active">700 postagens</div>
-    <div class="tab">1.600 mídias</div>
-  </div>
-
-  <div class="locked-content">
-    <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" alt="cadeado" />
-    <p>Conteúdo disponível após assinatura</p>
-    <div class="stats-bar">
-      <span>📷 700</span>
-      <span>🎥 1.200</span>
-      <span>❤️ 58.8K</span>
-    </div>
-  </div>
-
-  <!-- POP-UP -->
-  <div id="popup">
-    <div class="popup-content">
-      <span class="close" onclick="fecharPopup()">×</span>
-
-      <div class="popup-banner">
-        <img src="https://i.postimg.cc/YCYrVZx7/xcg4uu.jpg" alt="Banner">
-      </div>
-
-      <div class="popup-profile-pic">
-        <img src="https://i.postimg.cc/YCYrVZx7/xcg4uu.jpg" alt="Perfil">
-      </div>
-
-      <div class="popup-info">
-        <h2 id="popupTitulo">Assinatura</h2>
-        <p class="popup-preco" id="popupValor">R$ 00,00</p>
-        <p class="popup-desc">Acesse conteúdos exclusivos da criadora</p>
-        <div class="popup-pix" id="chavePix"></div>
-        <button onclick="copiarPix()">Copiar chave Pix</button>
+  <div class="profile-bubble">
+    <div class="cover">
+      <div class="profile-pic"></div>
+      <div class="stats-inline">
+        <div><i class="ri-image-line"></i>3.1K</div>
+        <div><i class="ri-film-line"></i>1.2K</div>
+        <div><i class="ri-lock-line"></i>165</div>
+        <div><i class="ri-heart-line"></i>1.4K</div>
       </div>
     </div>
+
+    <div class="info">
+      <div class="name">Nayara <i class="ri-verified-badge-fill"></i></div>
+      <div class="username">@Nayassunçao</div>
+      <div class="bio">
+        Post novo duas vezes por semana 🥰 Selfies explícitas, vídeos sozinha e acompanhada,...
+      </div>
+      <div class="social-icons">
+        <i class="ri-instagram-line"></i>
+        <i class="ri-close-line"></i>
+      </div>
+    </div>
+
+    <div class="plans">
+  <h3>Assinaturas</h3>
+  <button class="plan-btn" data-link="https://app.pushinpay.com.br/service/pay/9f94c2db-fad5-433f-a2d4-cba1ec567284">1 mês <span>R$ 25,00</span></button>
+
+  <h3>Promoções</h3>
+  <button class="plan-btn" data-link="https://app.pushinpay.com.br/service/pay/9f94c39e-bf5d-46ba-b22f-5b3b59c93dec">3 meses (10% off) <span>R$ 67,50</span></button>
+  <button class="plan-btn" data-link="https://app.pushinpay.com.br/service/pay/9f94c431-1dd5-4ec6-9cde-f5284a37fc74">6 meses (10% off) <span>R$ 135,00</span></button>
+</div>
+
+  <div class="profile-tabs-bottom">
+    <div class="tab active">
+      <i class="ri-smartphone-line"></i>
+      <span onclick="mostrarPostagens()" style="cursor: pointer;">368 postagens</span>
+    </div>
+    <div class="tab">
+      <i class="ri-film-line"></i>
+      <span onclick="mostrarMidias()" style="cursor: pointer; color: orange;">4.286 Mídias</span>
+    </div>
   </div>
 
-  <!-- SCRIPT -->
+  <div class="profile-bubble-lower">
+    <div style="display: flex; align-items: center;">
+      <img src="https://i.postimg.cc/yxQkzcQB/7j9nkm.jpg" style="width: 45px; height: 45px; border-radius: 50%; object-fit: cover; margin-right: 10px;">
+      <div>
+        <div style="font-weight: bold; font-size: 16px; display: flex; align-items: center;">
+          Nayara<i class="ri-verified-badge-fill"></i>
+        </div>
+        <div style="font-size: 14px; color: #aaa;">@Nayassunçao</div>
+      </div>
+    </div>
+
+    <div id="abaPostagens" style="margin-top: 15px;">
+      <img src="https://i.postimg.cc/x8KNkNFw/IMG-20250807-005842.jpg" style="width: 100%; border-radius: 10px; object-fit: cover;">
+    </div>
+
+    <div id="abaMidias" style="display: none; margin-top: 15px;">
+      <div style="background-color: #121212; border-radius: 20px; padding: 10px;">
+        <div style="display: flex; justify-content: space-around; margin-bottom: 10px;">
+          <span style="color: #ff7754; background-color: #2b1a12; padding: 5px 15px; border-radius: 20px;">Todos</span>
+          <span style="color: #fff;">Fotos</span>
+          <span style="color: #fff;">Vídeos</span>
+        </div>
+
+        <div class="midia-grid">
+          <div class="midia-quadrado">
+            <span class="cadeado ri-lock-line"></span>
+            <img src="https://i.postimg.cc/vmYF5k8q/Screenshot-2025-08-07-03-20-42-816-com-android-chrome-edit.jpg" alt="Imagem" style="width:100%; height:100%; object-fit: cover; position:absolute; top:0; left:0; border-radius: 10x;">
+          </div>
+          <div class="midia-quadrado">
+            <span class="cadeado ri-lock-line"></span>
+            <img src="https://i.postimg.cc/vmYF5k8q/Screenshot-2025-08-07-03-20-42-816-com-android-chrome-edit.jpg" alt="Imagem" style="width:100%; height:100%; object-fit: cover; position:absolute; top:0; left:0; border-radius: 10x;">
+          </div>
+          <div class="midia-quadrado">
+            <span class="cadeado ri-lock-line"></span>
+<img src="https://i.postimg.cc/vmYF5k8q/Screenshot-2025-08-07-03-20-42-816-com-android-chrome-edit.jpg" alt="Imagem" style="width:100%; height:100%; object-fit: cover; position:absolute; top:0; left:0; border-radius: 10x;">
+ </div>
+          <div class="midia-quadrado">
+            <span class="cadeado ri-lock-line"></span>
+<img src="https://i.postimg.cc/vmYF5k8q/Screenshot-2025-08-07-03-20-42-816-com-android-chrome-edit.jpg" alt="Imagem" style="width:100%; height:100%; object-fit: cover; position:absolute; top:0; left:0; border-radius: 10x;">
+ </div>
+          <div class="midia-quadrado">
+            <span class="cadeado ri-lock-line"></span>
+<img src="https://i.postimg.cc/vmYF5k8q/Screenshot-2025-08-07-03-20-42-816-com-android-chrome-edit.jpg" alt="Imagem" style="width:100%; height:100%; object-fit: cover; position:absolute; top:0; left:0; border-radius: 10x;">
+ </div>
+          <div class="midia-quadrado">
+            <span class="cadeado ri-lock-line"></span>
+<img src="https://i.postimg.cc/vmYF5k8q/Screenshot-2025-08-07-03-20-42-816-com-android-chrome-edit.jpg" alt="Imagem" style="width:100%; height:100%; object-fit: cover; position:absolute; top:0; left:0; border-radius: 10x;">
+ </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+      <div style="display: flex; gap: 20px;">
+        <i class="ri-heart-line" style="font-size: 22px; color: #aaa;"></i>
+        <i class="ri-chat-3-line" style="font-size: 22px; color: #aaa;"></i>
+        <i class="ri-money-dollar-circle-line" style="font-size: 22px; color: #aaa;"></i>
+      </div>
+      <i class="ri-bookmark-line" style="font-size: 22px; color: #aaa;"></i>
+    </div>
+
+    <div style="display: flex; justify-content: space-around; margin-top: 20px; border-top: 1px solid #444; padding-top: 15px;">
+      <button style="background-color: transparent; border: none; color: white; font-weight: bold; font-size: 15px;">
+      <button style="background-color: transparent; border: none; color: white; font-weight: bold; font-size: 15px;"
+    </div>
+  </div>
+
+  <div class="footer-nav-wrapper">
+    <div class="footer-nav">
+      <div class="footer-item">
+        <i class="ri-flashlight-fill active"></i>
+        <span>Mural</span>
+      </div>
+      <div class="footer-item">
+        <i class="ri-smartphone-line"></i>
+        <span>Feed</span>
+      </div>
+      <div class="footer-item">
+        <i class="ri-line-chart-line"></i>
+        <span>Em alta</span>
+      </div>
+      <div class="footer-item">
+        <i class="ri-chat-3-line chat-icon"></i>
+        <span>Chat</span>
+      </div>
+      <div class="footer-item">
+        <i class="ri-menu-line"></i>
+        <span>Menu</span>
+      </div>
+    </div>
+  </div>
+      <!-- POPUP DE PLANOS -->
+<div id="popupPlano" style="display:none; position:fixed; top:0; left:0; width:110vw; height:100vh; background:rgba(0,0,0,0.85); justify-content:center; align-items:center; z-index:9999; padding:-90px;">
+  <div class="popup-bubble" style="background:#111; border-radius:20px; max-width:400px; width:90%; color:#fff; position:relative; box-shadow:0 0 10px rgba(255,255,255,0.05); overflow:visible; display:flex; flex-direction:column;min-height: 600px;
+">
+    <div class="cover" style="width:100%; height:90px; background-image:url('https://i.postimg.cc/L5YMnP4m/IMG-20250807-031913.jpg'); background-size:cover; background-position:center; border-top-left-radius:20px; border-top-right-radius:20px; position:relative;">
+      <div class="profile-pic" style="width:70px; height:70px; border-radius:50%; border:3px solid #000; position:absolute; bottom:-35px; left:15px; background-image:url('https://i.postimg.cc/yxQkzcQB/7j9nkm.jpg'); background-size:cover; background-position:center; box-shadow:0 0 8px rgba(255,255,255,0.3); z-index:10;"></div>
+    </div>
+    <div class="info" style="padding:15px 15px 15px 85px; min-height:90px; box-sizing:border-box; position:relative;">
+     <div style="margin-bottom:15px;">
+        <div class="name" style="font-size:20px; font-weight:bold; display:flex; align-items:center; gap:6px; color:#fff;">
+          Nayara <i class="ri-verified-badge-fill" style="color:orange;"></i>
+        </div>
+        <div class="username" style="font-size:14px; color:#aaa;">@Nayassunçao</div>
+      </div>
+      <!-- Imagem do plano que aparece no popup -->
+<div class="popup-plan-image" style="text-align: left; margin: 10px 15px 10px -80px;">
+  <img src="https://i.postimg.cc/pXnPZYst/1000092228-removebg-preview.png" style="width: 250px; border-radius: 12px;">
+</div>
+      <div class="plan-details" style="font-size:18px; font-weight:600; color:#ff944d; margin-top:50px; display:flex; justify-content:flex-start; gap:15px; padding:0 15px 15px 15px; border-bottom:1px solid #333;">
+  <span id="popupPlanName">Plano</span>
+  <span id="popupPlanPrice">Preço</span>
+</div>
+    </div>
+    <div style="margin-top:20px; width:90%;">
+  <a id="checkoutLink" href="https://seulinkdecheckout.com" target="_blank">
+    <img src="https://i.postimg.cc/1RvSP7jS/1000092260-removebg-preview.png" alt="Ir para checkout" style="width:100%; border-radius:8px;">
+  </a>
+  </div>
+ <button id="fecharPopup" style="margin:102px auto 20px auto; border:none; border-radius:30px; padding:10px 30px; font-weight:bold; font-size:16px; cursor:pointer; display:block; background:#ff944d; color:#000; max-width:320px; width:90%;">Fechar</button>
+  </div>
+</div>
+
+
   <script>
-    function abrirPopup(plano, valor) {
-      document.getElementById('popup').style.display = 'flex';
-      document.getElementById('popupTitulo').innerText = plano;
-      document.getElementById('popupValor').innerText = valor;
-    }
-
-    function fecharPopup() {
-      document.getElementById('popup').style.display = 'none';
-    }
-
-    function copiarPix() {
-      const chave = document.getElementById("chavePix").innerText;
-      const plano = document.getElementById("popupTitulo").innerText;
-
-      navigator.clipboard.writeText(chave).then(() => {
-      
-
-        // Redirecionamento conforme o plano
-        let linkCheckout = "#";
-
-        if (plano.includes("1 semana")) {
-          linkCheckout = "https://app.pushinpay.com.br/service/pay/9F71C2C4-7142-41A6-959C-52F9958CE885";
-        } else if (plano.includes("1 mês")) {
-          linkCheckout = "https://app.pushinpay.com.br/service/pay/9F2BE2A3-3FFB-43E4-B043-EBEEB3416390";
-        } else if (plano.includes("3 meses")) {
-          linkCheckout = "https://app.pushinpay.com.br/service/pay/9F2BE2E7-879D-4A0B-AEB6-E7CF18612970";
-        }
-
-        window.location.href = linkCheckout;
+    const tabsBottom = document.querySelectorAll('.profile-tabs-bottom .tab');
+    tabsBottom.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabsBottom.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
       });
-    }
-  </script>
+    });
 
+    function mostrarPostagens() {
+      document.getElementById('abaPostagens').style.display = 'block';
+      document.getElementById('abaMidias').style.display = 'none';
+    }
+
+    function mostrarMidias() {
+      document.getElementById('abaPostagens').style.display = 'none';
+      document.getElementById('abaMidias').style.display = 'block';
+    }
+  const botoesPlanos = document.querySelectorAll('.plan-btn');
+  const popup = document.getElementById('popupPlano');
+  const btnFechar = document.getElementById('fecharPopup');
+  const btnCopiarPix = document.getElementById('copiarPix');
+  const popupPlanName = document.getElementById('popupPlanName');
+  const popupPlanPrice = document.getElementById('popupPlanPrice');
+
+  // Sua chave Pix — substitua aqui pela sua real
+  const chavePix = 'meuemail@provedor.com';
+
+  // Link do checkout — substitua pelo seu link real
+  const linkCheckout = 'https://seucheckout.com/pagamento';
+
+
+  const checkoutLink = document.getElementById('checkoutLink');
+  botoesPlanos.forEach(botao => {
+    botao.addEventListener('click', () => {
+      const precoSpan = botao.querySelector('span');
+      const preco = precoSpan ? precoSpan.textContent : '';
+      const nomePlano = botao.textContent.replace(preco, '').trim();
+
+      popupPlanName.textContent = nomePlano;
+      popupPlanPrice.textContent = preco;
+
+      const linkDoPlano = botao.getAttribute('data-link');
+      if (linkDoPlano) {
+        checkoutLink.href = linkDoPlano;
+      }
+
+      popup.style.display = 'flex';
+    });
+  });
+
+
+  btnFechar.addEventListener('click', () => {
+    popup.style.display = 'none';
+  });
+
+  popup.addEventListener('click', e => {
+    if (e.target === popup) {
+      popup.style.display = 'none';
+    }
+  });
+
+  btnCopiarPix.addEventListener('click', () => {
+    navigator.clipboard.writeText(chavePix).then(() => {alert('Chave Pix copiada! Redirecionando para o checkout...');
+      window.location.href = linkCheckout;
+    }).catch(() => {
+      alert('Não foi possível copiar a chave Pix. Copie manualmente: ' + chavePix);
+      window.location.href = linkCheckout;
+    });
+  });
+  </script>
 </body>
 </html>
