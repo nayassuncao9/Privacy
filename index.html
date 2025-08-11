@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy</title>
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Privacy</title>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"/>
+<style>
   .aba-midia {
     display: none;
     animation: deslizar 0.4s ease forwards;
@@ -46,8 +47,8 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #000;
-      color: #fff;
+      background-color: #f5ede3;
+      color: #000;
     }
 
     .header {
@@ -55,7 +56,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 12px 20px;
-      background-color: #000;
+      background-color: #f5ede3;
     }
 
     .header-icons {
@@ -70,13 +71,13 @@
     }
 
     .header .logo {
-      height: 40px;
+      height: 90px;
       cursor: pointer;
     }
 
     .header i {
       font-size: 24px;
-      color: #fff;
+      color: #000;
       cursor: pointer;
     }
 
@@ -87,7 +88,7 @@
       padding: 12px 16px;
       font-size: 18px;
       font-weight: bold;
-      background-color: #000;
+      background-color: #f5ede3;
     }
 
     .top-bar i {
@@ -96,7 +97,7 @@
     }
 
     .profile-bubble {
-      background-color: #111;
+      background-color: #f5ede3;
       margin: 20px 15px 25px;
       padding: 0;
       border-radius: 20px;
@@ -208,7 +209,7 @@
     .plans h3 {
       font-size: 16px;
       margin-bottom: 10px;
-      color: #fff;
+      color: #000;
     }
 
     .plan-btn {
@@ -235,18 +236,18 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      background-color: #111;
+      background-color: #f5ede3;
       border-radius: 20px;
       padding: 12px;
       margin: 20px 15px;
-      border: 1px solid #222;
+      border: 1px solid #ccc;
     }
 
     .profile-tabs-bottom .tab {
       display: flex;
       align-items: center;
       gap: 6px;
-      color: #fff;
+      color: #000;
       font-size: 14px;
       padding: 8px 12px;
       border-radius: 12px;
@@ -286,7 +287,7 @@
 
     .footer-nav i {
       font-size: 20px;
-      color: #fff;
+      color: #000;
       position: relative;
       cursor: pointer;
     }
@@ -304,7 +305,7 @@
     .footer-nav {
       display: flex;
       justify-content: space-around;
-      background-color: #111;
+      background-color: #f5ede3;
       padding: 8px 0;
     }
 
@@ -315,7 +316,7 @@
       text-align: center;
       width: 60px;
       font-size: 10px;
-      color: white;
+      color: black;
     }
 
     .footer-item i {
@@ -331,7 +332,7 @@
     }
 
     .profile-bubble-lower {
-      background-color: #111;
+      background-color: #f5ede3;
       border-radius: 20px;
       margin: 15px auto 40px auto;
       padding: 15px;
@@ -351,7 +352,7 @@
       width: 100%;
       aspect-ratio: 1 / 1;
       border-radius: 10px;
-      background-color: #222;
+      background-color: #f5ede3;
       position: relative;
       overflow: hidden;
       cursor: pointer;
@@ -384,7 +385,7 @@
 .popup-pix .bolha {
   width: 90%;
   max-width: 400px;
-  background-color: #111;
+  background-color: #f5ede3;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 0 20px #ff0069;
@@ -462,192 +463,194 @@
 
 
   </style>
-</head>
-
+<style>
+/* Tema claro com sombras e bordas */
+body {
+    background-color: #f5ede3 !important;
+    color: #000 !important;
+}
+.profile-bubble, .profile-bubble-lower, .popup-bubble, .footer-nav, .midia-quadrado {
+    background-color: #fff !important;
+    border-radius: 20px !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1) !important;
+}
+.popup-bubble {
+    background-color: #fff !important;
+}
+.popup-bubble .name, .popup-bubble .username, .popup-bubble .plan-details, .popup-bubble span {
+    color: #000 !important;
+}
+.plans h3, .plan-btn, .stats-inline div, .name, .username, .bio, .social-icons i {
+    color: #000 !important;
+}
+</style></head>
 <body>
-  
-  <div class="header">
-    <img src="https://i.postimg.cc/Qxv85zh3/Air-Brush-20250806212025.jpg" alt="Logo" class="logo" />
-    <div class="header-icons">
-      <i class="ri-search-line"></i>
-      <i class="ri-notification-3-line"></i>
-    </div>
-  </div>
-
-  <div class="top-bar">
-    <i class="ri-arrow-left-line" style="cursor:pointer;" onclick="window.location.href='https://privacy.com.br/board';"></i>
-    <span>Nayara</span>
-    <i class="ri-more-2-fill"></i>
-  </div>
-
-  <div class="profile-bubble">
-    <div class="cover">
-      <div class="profile-pic"></div>
-      <div class="stats-inline">
-        <div><i class="ri-image-line"></i>3.1K</div>
-        <div><i class="ri-film-line"></i>1.2K</div>
-        <div><i class="ri-lock-line"></i>165</div>
-        <div><i class="ri-heart-line"></i>1.4K</div>
-      </div>
-    </div>
-
-    <div class="info">
-      <div class="name">Nayara <i class="ri-verified-badge-fill"></i></div>
-      <div class="username">@Nayassunçao</div>
-      <div class="bio">
+<div class="header">
+<img alt="Logo" class="logo" src="https://i.postimg.cc/xdhmTqgw/erasebg-transformed-1.png"/>
+<div class="header-icons">
+<i class="ri-search-line"></i>
+<i class="ri-notification-3-line"></i>
+</div>
+</div>
+<div class="top-bar">
+<i class="ri-arrow-left-line" onclick="window.location.href='https://privacy.com.br/board';" style="cursor:pointer;"></i>
+<span>Nayara</span>
+<i class="ri-more-2-fill"></i>
+</div>
+<div class="profile-bubble">
+<div class="cover">
+<div class="profile-pic"></div>
+<div class="stats-inline">
+<div><i class="ri-image-line"></i>3.1K</div>
+<div><i class="ri-film-line"></i>1.2K</div>
+<div><i class="ri-lock-line"></i>165</div>
+<div><i class="ri-heart-line"></i>1.4K</div>
+</div>
+</div>
+<div class="info">
+<div class="name">Nayara <i class="ri-verified-badge-fill"></i></div>
+<div class="username">@Nayassunçao</div>
+<div class="bio">
         Post novo duas vezes por semana 🥰 Selfies explícitas, vídeos sozinha e acompanhada,...
       </div>
-      <div class="social-icons">
-        <i class="ri-instagram-line"></i>
-        <i class="ri-close-line"></i>
-      </div>
-    </div>
-
-    <div class="plans">
-  <h3>Assinaturas</h3>
-  <button class="plan-btn" data-link="https://app.pushinpay.com.br/service/pay/9f94c2db-fad5-433f-a2d4-cba1ec567284">1 mês <span>R$ 25,00</span></button>
-
-  <h3>Promoções</h3>
-  <button class="plan-btn" data-link="https://app.pushinpay.com.br/service/pay/9f94c39e-bf5d-46ba-b22f-5b3b59c93dec">3 meses (10% off) <span>R$ 67,50</span></button>
-  <button class="plan-btn" data-link="https://app.pushinpay.com.br/service/pay/9f94c431-1dd5-4ec6-9cde-f5284a37fc74">6 meses (10% off) <span>R$ 135,00</span></button>
+<div class="social-icons">
+<i class="ri-instagram-line"></i>
+<i class="ri-close-line"></i>
 </div>
-
-  <div class="profile-tabs-bottom">
-    <div class="tab active">
-      <i class="ri-smartphone-line"></i>
-      <span onclick="mostrarPostagens()" style="cursor: pointer;">368 postagens</span>
-    </div>
-    <div class="tab">
-      <i class="ri-film-line"></i>
-      <span onclick="mostrarMidias()" style="cursor: pointer; color: orange;">4.286 Mídias</span>
-    </div>
-  </div>
-
-  <div class="profile-bubble-lower">
-    <div style="display: flex; align-items: center;">
-      <img src="https://i.postimg.cc/yxQkzcQB/7j9nkm.jpg" style="width: 45px; height: 45px; border-radius: 50%; object-fit: cover; margin-right: 10px;">
-      <div>
-        <div style="font-weight: bold; font-size: 16px; display: flex; align-items: center;">
-          Nayara<i class="ri-verified-badge-fill"></i>
-        </div>
-        <div style="font-size: 14px; color: #aaa;">@Nayassunçao</div>
-      </div>
-    </div>
-
-    <div id="abaPostagens" style="margin-top: 15px;">
-      <img src="https://i.postimg.cc/x8KNkNFw/IMG-20250807-005842.jpg" style="width: 100%; border-radius: 10px; object-fit: cover;">
-    </div>
-
-    <div id="abaMidias" style="display: none; margin-top: 15px;">
-      <div style="background-color: #121212; border-radius: 20px; padding: 10px;">
-        <div style="display: flex; justify-content: space-around; margin-bottom: 10px;">
-          <span style="color: #ff7754; background-color: #2b1a12; padding: 5px 15px; border-radius: 20px;">Todos</span>
-          <span style="color: #fff;">Fotos</span>
-          <span style="color: #fff;">Vídeos</span>
-        </div>
-
-        <div class="midia-grid">
-          <div class="midia-quadrado">
-            <span class="cadeado ri-lock-line"></span>
-            <img src="https://i.postimg.cc/vmYF5k8q/Screenshot-2025-08-07-03-20-42-816-com-android-chrome-edit.jpg" alt="Imagem" style="width:100%; height:100%; object-fit: cover; position:absolute; top:0; left:0; border-radius: 10x;">
-          </div>
-          <div class="midia-quadrado">
-            <span class="cadeado ri-lock-line"></span>
-            <img src="https://i.postimg.cc/vmYF5k8q/Screenshot-2025-08-07-03-20-42-816-com-android-chrome-edit.jpg" alt="Imagem" style="width:100%; height:100%; object-fit: cover; position:absolute; top:0; left:0; border-radius: 10x;">
-          </div>
-          <div class="midia-quadrado">
-            <span class="cadeado ri-lock-line"></span>
-<img src="https://i.postimg.cc/vmYF5k8q/Screenshot-2025-08-07-03-20-42-816-com-android-chrome-edit.jpg" alt="Imagem" style="width:100%; height:100%; object-fit: cover; position:absolute; top:0; left:0; border-radius: 10x;">
- </div>
-          <div class="midia-quadrado">
-            <span class="cadeado ri-lock-line"></span>
-<img src="https://i.postimg.cc/vmYF5k8q/Screenshot-2025-08-07-03-20-42-816-com-android-chrome-edit.jpg" alt="Imagem" style="width:100%; height:100%; object-fit: cover; position:absolute; top:0; left:0; border-radius: 10x;">
- </div>
-          <div class="midia-quadrado">
-            <span class="cadeado ri-lock-line"></span>
-<img src="https://i.postimg.cc/vmYF5k8q/Screenshot-2025-08-07-03-20-42-816-com-android-chrome-edit.jpg" alt="Imagem" style="width:100%; height:100%; object-fit: cover; position:absolute; top:0; left:0; border-radius: 10x;">
- </div>
-          <div class="midia-quadrado">
-            <span class="cadeado ri-lock-line"></span>
-<img src="https://i.postimg.cc/vmYF5k8q/Screenshot-2025-08-07-03-20-42-816-com-android-chrome-edit.jpg" alt="Imagem" style="width:100%; height:100%; object-fit: cover; position:absolute; top:0; left:0; border-radius: 10x;">
- </div>
-        </div>
-      </div>
-    </div>
-
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
-      <div style="display: flex; gap: 20px;">
-        <i class="ri-heart-line" style="font-size: 22px; color: #aaa;"></i>
-        <i class="ri-chat-3-line" style="font-size: 22px; color: #aaa;"></i>
-        <i class="ri-money-dollar-circle-line" style="font-size: 22px; color: #aaa;"></i>
-      </div>
-      <i class="ri-bookmark-line" style="font-size: 22px; color: #aaa;"></i>
-    </div>
-
-    <div style="display: flex; justify-content: space-around; margin-top: 20px; border-top: 1px solid #444; padding-top: 15px;">
-      <button style="background-color: transparent; border: none; color: white; font-weight: bold; font-size: 15px;">
-      <button style="background-color: transparent; border: none; color: white; font-weight: bold; font-size: 15px;"
-    </div>
-  </div>
-
-  <div class="footer-nav-wrapper">
-    <div class="footer-nav">
-      <div class="footer-item">
-        <i class="ri-flashlight-fill active"></i>
-        <span>Mural</span>
-      </div>
-      <div class="footer-item">
-        <i class="ri-smartphone-line"></i>
-        <span>Feed</span>
-      </div>
-      <div class="footer-item">
-        <i class="ri-line-chart-line"></i>
-        <span>Em alta</span>
-      </div>
-      <div class="footer-item">
-        <i class="ri-chat-3-line chat-icon"></i>
-        <span>Chat</span>
-      </div>
-      <div class="footer-item">
-        <i class="ri-menu-line"></i>
-        <span>Menu</span>
-      </div>
-    </div>
-  </div>
-      <!-- POPUP DE PLANOS -->
+</div>
+<div class="plans">
+<h3>Assinaturas</h3>
+<button class="plan-btn" data-link="https://app.pushinpay.com.br/service/pay/9f94c2db-fad5-433f-a2d4-cba1ec567284">1 mês <span>R$ 25,00</span></button>
+<h3>Promoções</h3>
+<button class="plan-btn" data-link="https://app.pushinpay.com.br/service/pay/9f94c39e-bf5d-46ba-b22f-5b3b59c93dec">3 meses (10% off) <span>R$ 67,50</span></button>
+<button class="plan-btn" data-link="https://app.pushinpay.com.br/service/pay/9f94c431-1dd5-4ec6-9cde-f5284a37fc74">6 meses (10% off) <span>R$ 135,00</span></button>
+</div>
+<div class="profile-tabs-bottom">
+<div class="tab active">
+<i class="ri-smartphone-line"></i>
+<span onclick="mostrarPostagens()" style="cursor: pointer;">368 postagens</span>
+</div>
+<div class="tab">
+<i class="ri-film-line"></i>
+<span onclick="mostrarMidias()" style="cursor: pointer; color: orange;">4.286 Mídias</span>
+</div>
+</div>
+<div class="profile-bubble-lower">
+<div style="display: flex; align-items: center;">
+<img src="https://i.postimg.cc/yxQkzcQB/7j9nkm.jpg" style="width: 45px; height: 45px; border-radius: 50%; object-fit: cover; margin-right: 10px;"/>
+<div>
+<div class="name" style="font-size:18px; font-weight:bold; display:flex; align-items:center; gap:6px; color: #000;">
+  Nayara<i class="ri-verified-badge-fill"></i>
+</div>
+<div style="font-size: 14px; color: #aaa;">@Nayassunçao</div>
+</div>
+</div>
+<div id="abaPostagens" style="margin-top: 15px;">
+<img src="https://i.postimg.cc/x8KNkNFw/IMG-20250807-005842.jpg" style="width: 100%; border-radius: 10px; object-fit: cover;"/>
+</div>
+<div id="abaMidias" style="display: none; margin-top: 15px;">
+<div style="background-color: #121212; border-radius: 20px; padding: 10px;">
+<div style="display: flex; justify-content: space-around; margin-bottom: 10px;">
+<span style="color: #ff7754; background-color: #2b1a12; padding: 5px 15px; border-radius: 20px;">Todos</span>
+<span style="color: #000;">Fotos</span>
+<span style="color: #000;">Vídeos</span>
+</div>
+<div class="midia-grid">
+<div class="midia-quadrado">
+<span class="cadeado ri-lock-line"></span>
+<img alt="Imagem" src="https://i.postimg.cc/vmYF5k8q/Screenshot-2025-08-07-03-20-42-816-com-android-chrome-edit.jpg" style="width:100%; height:100%; object-fit: cover; position:absolute; top:0; left:0; border-radius: 10x;"/>
+</div>
+<div class="midia-quadrado">
+<span class="cadeado ri-lock-line"></span>
+<img alt="Imagem" src="https://i.postimg.cc/vmYF5k8q/Screenshot-2025-08-07-03-20-42-816-com-android-chrome-edit.jpg" style="width:100%; height:100%; object-fit: cover; position:absolute; top:0; left:0; border-radius: 10x;"/>
+</div>
+<div class="midia-quadrado">
+<span class="cadeado ri-lock-line"></span>
+<img alt="Imagem" src="https://i.postimg.cc/vmYF5k8q/Screenshot-2025-08-07-03-20-42-816-com-android-chrome-edit.jpg" style="width:100%; height:100%; object-fit: cover; position:absolute; top:0; left:0; border-radius: 10x;"/>
+</div>
+<div class="midia-quadrado">
+<span class="cadeado ri-lock-line"></span>
+<img alt="Imagem" src="https://i.postimg.cc/vmYF5k8q/Screenshot-2025-08-07-03-20-42-816-com-android-chrome-edit.jpg" style="width:100%; height:100%; object-fit: cover; position:absolute; top:0; left:0; border-radius: 10x;"/>
+</div>
+<div class="midia-quadrado">
+<span class="cadeado ri-lock-line"></span>
+<img alt="Imagem" src="https://i.postimg.cc/vmYF5k8q/Screenshot-2025-08-07-03-20-42-816-com-android-chrome-edit.jpg" style="width:100%; height:100%; object-fit: cover; position:absolute; top:0; left:0; border-radius: 10x;"/>
+</div>
+<div class="midia-quadrado">
+<span class="cadeado ri-lock-line"></span>
+<img alt="Imagem" src="https://i.postimg.cc/vmYF5k8q/Screenshot-2025-08-07-03-20-42-816-com-android-chrome-edit.jpg" style="width:100%; height:100%; object-fit: cover; position:absolute; top:0; left:0; border-radius: 10x;"/>
+</div>
+</div>
+</div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+<div style="display: flex; gap: 20px;">
+<i class="ri-heart-line" style="font-size: 22px; color: #aaa;"></i>
+<i class="ri-chat-3-line" style="font-size: 22px; color: #aaa;"></i>
+<i class="ri-money-dollar-circle-line" style="font-size: 22px; color: #aaa;"></i>
+</div>
+<i class="ri-bookmark-line" style="font-size: 22px; color: #aaa;"></i>
+</div>
+<div style="display: flex; justify-content: space-around; margin-top: 20px; border-top: 1px solid #444; padding-top: 15px;">
+<button style="background-color: transparent; border: none; color: white; font-weight: bold; font-size: 15px;">
+<button <="" div="" style="background-color: transparent; border: none; color: white; font-weight: bold; font-size: 15px;">
+</button></button></div>
+<div class="footer-nav-wrapper">
+<div class="footer-nav">
+<div class="footer-item">
+<i class="ri-flashlight-fill active"></i>
+<span>Mural</span>
+</div>
+<div class="footer-item">
+<i class="ri-smartphone-line"></i>
+<span>Feed</span>
+</div>
+<div class="footer-item">
+<i class="ri-line-chart-line"></i>
+<span>Em alta</span>
+</div>
+<div class="footer-item">
+<i class="ri-chat-3-line chat-icon"></i>
+<span>Chat</span>
+</div>
+<div class="footer-item">
+<i class="ri-menu-line"></i>
+<span>Menu</span>
+</div>
+</div>
+</div>
+<!-- POPUP DE PLANOS -->
 <div id="popupPlano" style="display:none; position:fixed; top:0; left:0; width:110vw; height:100vh; background:rgba(0,0,0,0.85); justify-content:center; align-items:center; z-index:9999; padding:-90px;">
-  <div class="popup-bubble" style="background:#111; border-radius:20px; max-width:400px; width:90%; color:#fff; position:relative; box-shadow:0 0 10px rgba(255,255,255,0.05); overflow:visible; display:flex; flex-direction:column;min-height: 600px;
+<div class="popup-bubble" style="background:#111; border-radius:20px; max-width:400px; width:90%; color: #000; position:relative; box-shadow:0 0 10px rgba(255,255,255,0.05); overflow:visible; display:flex; flex-direction:column;min-height: 600px;
 ">
-    <div class="cover" style="width:100%; height:90px; background-image:url('https://i.postimg.cc/L5YMnP4m/IMG-20250807-031913.jpg'); background-size:cover; background-position:center; border-top-left-radius:20px; border-top-right-radius:20px; position:relative;">
-      <div class="profile-pic" style="width:70px; height:70px; border-radius:50%; border:3px solid #000; position:absolute; bottom:-35px; left:15px; background-image:url('https://i.postimg.cc/yxQkzcQB/7j9nkm.jpg'); background-size:cover; background-position:center; box-shadow:0 0 8px rgba(255,255,255,0.3); z-index:10;"></div>
-    </div>
-    <div class="info" style="padding:15px 15px 15px 85px; min-height:90px; box-sizing:border-box; position:relative;">
-     <div style="margin-bottom:15px;">
-        <div class="name" style="font-size:20px; font-weight:bold; display:flex; align-items:center; gap:6px; color:#fff;">
+<div class="cover" style="width:100%; height:90px; background-image:url('https://i.postimg.cc/L5YMnP4m/IMG-20250807-031913.jpg'); background-size:cover; background-position:center; border-top-left-radius:20px; border-top-right-radius:20px; position:relative;">
+<div class="profile-pic" style="width:70px; height:70px; border-radius:50%; border:3px solid #000; position:absolute; bottom:-35px; left:15px; background-image:url('https://i.postimg.cc/yxQkzcQB/7j9nkm.jpg'); background-size:cover; background-position:center; box-shadow:0 0 8px rgba(255,255,255,0.3); z-index:10;"></div>
+</div>
+<div class="info" style="padding:15px 15px 15px 85px; min-height:90px; box-sizing:border-box; position:relative;">
+<div style="margin-bottom:15px;">
+<div class="name" style="font-size:20px; font-weight:bold; display:flex; align-items:center; gap:6px; color: #000;">
           Nayara <i class="ri-verified-badge-fill" style="color:orange;"></i>
-        </div>
-        <div class="username" style="font-size:14px; color:#aaa;">@Nayassunçao</div>
-      </div>
-      <!-- Imagem do plano que aparece no popup -->
+</div>
+<div class="username" style="font-size:14px; color:#aaa;">@Nayassunçao</div>
+</div>
+<!-- Imagem do plano que aparece no popup -->
 <div class="popup-plan-image" style="text-align: left; margin: 10px 15px 10px -80px;">
-  <img src="https://i.postimg.cc/pXnPZYst/1000092228-removebg-preview.png" style="width: 300px; border-radius: 12px;">
+<img src="https://i.postimg.cc/pXnPZYst/1000092228-removebg-preview.png" style="width: 300px; border-radius: 12px;"/>
 </div>
-      <div class="plan-details" style="font-size:18px; font-weight:600; color:#ff944d; margin-top:50px; display:flex; justify-content:flex-start; gap:15px; padding:0 15px 15px 15px; border-bottom:1px solid #333;">
-  <span id="popupPlanName">Plano</span>
-  <span id="popupPlanPrice">Preço</span>
+<div class="plan-details" style="font-size:18px; font-weight:600; color:#ff944d; margin-top:50px; display:flex; justify-content:flex-start; gap:15px; padding:0 15px 15px 15px; border-bottom:1px solid #333;">
+<span id="popupPlanName">Plano</span>
+<span id="popupPlanPrice">Preço</span>
 </div>
-    </div>
-    <div style="margin-top:20px; width:90%;">
-  <a id="checkoutLink" href="https://seulinkdecheckout.com" target="_blank">
-    <img src="https://i.postimg.cc/1RvSP7jS/1000092260-removebg-preview.png" alt="Ir para checkout" style="width:100%; border-radius:8px;">
-  </a>
-  </div>
- <button id="fecharPopup" style="margin:102px auto 20px auto; border:none; border-radius:30px; padding:10px 30px; font-weight:bold; font-size:16px; cursor:pointer; display:block; background:#ff944d; color:#000; max-width:320px; width:90%;">Fechar</button>
-  </div>
 </div>
-
-
-  <script>
+<div style="margin-top:20px; width:90%;">
+<a href="https://seulinkdecheckout.com" id="checkoutLink" target="_blank">
+<img alt="Ir para checkout" src="https://i.postimg.cc/1RvSP7jS/1000092260-removebg-preview.png" style="width:100%; border-radius:8px;"/>
+</a>
+</div>
+<button id="fecharPopup" style="margin:102px auto 20px auto; border:none; border-radius:30px; padding:10px 30px; font-weight:bold; font-size:16px; cursor:pointer; display:block; background:#ff944d; color:#000; max-width:320px; width:90%;">Fechar</button>
+</div>
+</div>
+<script>
     const tabsBottom = document.querySelectorAll('.profile-tabs-bottom .tab');
     tabsBottom.forEach(tab => {
       tab.addEventListener('click', () => {
@@ -686,37 +689,4 @@
       const preco = precoSpan ? precoSpan.textContent : '';
       const nomePlano = botao.textContent.replace(preco, '').trim();
 
-      popupPlanName.textContent = nomePlano;
-      popupPlanPrice.textContent = preco;
-
-      const linkDoPlano = botao.getAttribute('data-link');
-      if (linkDoPlano) {
-        checkoutLink.href = linkDoPlano;
-      }
-
-      popup.style.display = 'flex';
-    });
-  });
-
-
-  btnFechar.addEventListener('click', () => {
-    popup.style.display = 'none';
-  });
-
-  popup.addEventListener('click', e => {
-    if (e.target === popup) {
-      popup.style.display = 'none';
-    }
-  });
-
-  btnCopiarPix.addEventListener('click', () => {
-    navigator.clipboard.writeText(chavePix).then(() => {alert('Chave Pix copiada! Redirecionando para o checkout...');
-      window.location.href = linkCheckout;
-    }).catch(() => {
-      alert('Não foi possível copiar a chave Pix. Copie manualmente: ' + chavePix);
-      window.location.href = linkCheckout;
-    });
-  });
-  </script>
-</body>
-</html>
+      popupPlanName.t
