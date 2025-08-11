@@ -689,4 +689,37 @@ body {
       const preco = precoSpan ? precoSpan.textContent : '';
       const nomePlano = botao.textContent.replace(preco, '').trim();
 
-      popupPlanName.t
+      popupPlanName.textContent = nomePlano;
+      popupPlanPrice.textContent = preco;
+
+      const linkDoPlano = botao.getAttribute('data-link');
+      if (linkDoPlano) {
+        checkoutLink.href = linkDoPlano;
+      }
+
+      popup.style.display = 'flex';
+    });
+  });
+
+
+  btnFechar.addEventListener('click', () => {
+    popup.style.display = 'none';
+  });
+
+  popup.addEventListener('click', e => {
+    if (e.target === popup) {
+      popup.style.display = 'none';
+    }
+  });
+
+  btnCopiarPix.addEventListener('click', () => {
+    navigator.clipboard.writeText(chavePix).then(() => {alert('Chave Pix copiada! Redirecionando para o checkout...');
+      window.location.href = linkCheckout;
+    }).catch(() => {
+      alert('Não foi possível copiar a chave Pix. Copie manualmente: ' + chavePix);
+      window.location.href = linkCheckout;
+    });
+  });
+  </script>
+</div></div></body>
+</html>
