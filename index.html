@@ -7,7 +7,14 @@
 <title>Privacy</title>
 <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"/>
 <style>
-  .aba-midia {
+
+  
+/* Correção de tamanho da logo */
+.header .logo {
+  height: 90px !important;
+}
+
+.aba-midia {
     display: none;
     animation: deslizar 0.4s ease forwards;
   }
@@ -463,8 +470,9 @@
 /* Pode copiar os estilos inline para cá se quiser */
 
 
-  </style>
-<style>
+  
+
+
 /* Tema claro com sombras e bordas */
 body {
     background-color: #f5ede3 !important;
@@ -484,7 +492,522 @@ body {
 .plans h3, .plan-btn, .stats-inline div, .name, .username, .bio, .social-icons i {
     color: #000 !important;
 }
-</style></head>
+
+
+@media (prefers-color-scheme: dark) {
+
+/* Correção de tamanho da logo */
+.header .logo {
+  content: url("https://i.postimg.cc/0NpM9f6S/IMG-20250812-043329.jpg")
+  height: 90px !important;
+}
+
+
+
+
+  .aba-midia {
+    display: none;
+    animation: deslizar 0.4s ease forwards;
+  }
+
+  @keyframes deslizar {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .midia-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .midia-item {
+    background-color: #f5ede3;
+    border-radius: 10px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .midia-item img {
+    width: 30px;
+    opacity: 0.5;
+  }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 20px;
+      background-color: #000;
+    }
+
+    .header-icons {
+      display: flex;
+      gap: 12px;
+    }
+
+    .header-icons i {
+      font-size: 22px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .header .logo {
+      height: 40px;
+      cursor: pointer;
+    }
+
+    .header i {
+      font-size: 24px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px;
+      font-size: 18px;
+      font-weight: bold;
+      background-color: #000;
+    }
+
+    .top-bar i {
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    .profile-bubble {
+      background-color: #111;
+      margin: 20px 15px 25px;
+      padding: 0;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+      overflow: visible;
+      position: relative;
+    }
+
+    .cover {
+      width: 100%;
+      height: 90px;
+      background-image: url('https://i.postimg.cc/L5YMnP4m/IMG-20250807-031913.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    .profile-pic {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      border: 3px solid #000;
+      position: absolute;
+      bottom: -35px;
+      left: 15px;
+      background-image: url('https://i.postimg.cc/yxQkzcQB/7j9nkm.jpg');
+      background-size: cover;
+      background-position: center;
+      z-index: 10;
+      box-shadow: 0 0 8px rgba(255,255,255,0.3);
+    }
+
+    .stats-inline {
+      position: absolute;
+      bottom: -30px;
+      left: 125px;
+      display: flex;
+      gap: 12px;
+      font-size: 13px;
+      z-index: 10;
+    }
+
+    .stats-inline div {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+    }
+
+    .info {
+      padding: 50px 15px 15px;
+      text-align: left;
+      margin-left: 15px;
+    }
+
+    .name {
+      font-size: 18px;
+      font-weight: bold;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 5px;
+    }
+
+    .name i {
+      color: orange;
+    }
+
+    .username {
+      color: #aaa;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .bio {
+      font-size: 14px;
+      line-height: 1.4;
+      color: #ddd;
+      margin-bottom: 15px;
+      max-width: 90%;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .social-icons i {
+      background: #222;
+      padding: 10px;
+      border-radius: 50%;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .social-icons i:hover {
+      background: #ff944d;
+      color: #000;
+    }
+
+    .plans {
+      padding: 20px 15px;
+      border-top: 1px solid #222;
+    }
+
+    .plans h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .plan-btn {
+      background: linear-gradient(90deg, #fbc4a0, #fdb58d);
+      color: #000;
+      padding: 12px;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 15px;
+      margin-bottom: 10px;
+      width: 100%;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    .plan-btn:hover {
+      filter: brightness(1.1);
+    }
+
+    .profile-tabs-bottom {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #111;
+      border-radius: 20px;
+      padding: 12px;
+      margin: 20px 15px;
+      border: 1px solid #222;
+    }
+
+    .profile-tabs-bottom .tab {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #fff;
+      font-size: 14px;
+      padding: 8px 12px;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .profile-tabs-bottom .tab.active {
+      color: #ff944d;
+      border-bottom: 2px solid #ff944d;
+    }
+
+    .footer-nav-wrapper {
+      position: fixed;
+      bottom: 10px;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      pointer-events: none;
+      z-index: 1000;
+    }
+
+    .footer-nav {
+      background: #111;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 6px 10px;
+      border-radius: 30px;
+      width: 85%;
+      max-width: 340px;
+      height: 48px;
+      pointer-events: auto;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+    }
+
+    .footer-nav i {
+      font-size: 20px;
+      color: #fff;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .footer-nav .active {
+      color: #ff944d;
+    }
+
+    /* REMOVIDO O NÚMERO 2 DO CHAT */
+    .footer-nav .chat-icon::after {
+      content: none !important;
+      display: none !important;
+    }
+
+    .footer-nav {
+      display: flex;
+      justify-content: space-around;
+      background-color: #111;
+      padding: 8px 0;
+    }
+
+    .footer-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 60px;
+      font-size: 10px;
+      color: white;
+    }
+
+    .footer-item i {
+      font-size: 22px;
+    }
+
+    .footer-item span {
+      margin-top: 2px;
+      font-size: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .profile-bubble-lower {
+      background-color: #111;
+      border-radius: 20px;
+      margin: 15px auto 40px auto;
+      padding: 15px;
+      color: white;
+      font-family: sans-serif;
+      max-width: 400px;
+      box-sizing: border-box;
+    }
+
+    .midia-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .midia-quadrado {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 10px;
+      background-color: #222;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .midia-quadrado .cadeado {
+      font-size: 22px;
+      color: white;
+      z-index: 2;
+    }
+.profile-bubble-lower i.ri-verified-badge-fill {
+  color: orange;
+  margin-left: 5px; /* Para dar um espacinho */
+}
+  .popup-pix {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.95);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-pix .bolha {
+  width: 90%;
+  max-width: 400px;
+  background-color: #111;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 20px #ff0069;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.popup-pix .banner {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  display: block;
+  position: relative;
+}
+
+.popup-pix .fechar-x {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-size: 26px;
+  cursor: pointer;
+  z-index: 10;
+  background: none;
+  border: none;
+}
+
+.popup-pix .perfil {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-top: -40px;
+  object-fit: cover;
+}
+
+.popup-pix .nome {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.popup-pix .arroba {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.popup-pix .botao {
+  padding: 12px 20px;
+  background-color: #ff0069;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  width: 80%;
+  cursor: pointer;
+  margin: 20px auto;
+}
+
+.popup-pix .botao i {
+  margin-right: 6px;
+}
+/* Popup plano (opcional, se preferir colocar aqui ao invés do inline) */
+#popupPlano {
+  /* Já está no inline, mas se preferir, pode mover para cá */
+}
+
+.popup-bubble {
+  /* já no inline */
+}
+
+/* Pode copiar os estilos inline para cá se quiser */
+
+
+  
+
+
+/* ===== CORREÇÕES ADICIONAIS PARA MODO ESCURO ===== */
+body, .header, .top-bar, .profile-bubble, .profile-bubble-lower, .footer-nav, .popup-bubble, .popup-pix .bolha, .cover, .profile-pic {
+  background-color: #0f0f10 !important;
+  color: #e6e6e6 !important;
+  border-color: #1b1b1b !important;
+  box-shadow: none !important;
+}
+
+/* Elementos principais */
+.midia-quadrado, .midia-grid, .profile-tabs-bottom, .plans, .profile-bubble .cover, .profile-bubble-lower {
+  background-color: #141414 !important;
+  color: #e6e6e6 !important;
+}
+
+/* Textos e ícones */
+.name, .username, .bio, .stats-inline div, .plans h3, .footer-item span, .profile-tabs-bottom .tab, .profile-tabs-bottom .tab.active, .plan-btn span {
+  color: #e6e6e6 !important;
+}
+
+/* Ícones com fundo arredondado */
+.social-icons i, .header-icons i {
+  background: #222 !important;
+  color: #fff !important;
+}
+
+/* Forçar imagens e botões a adaptarem contraste */
+.plan-btn { color: #000 !important; }
+.footer-nav i, .footer-nav .active { color: #fff !important; }
+
+/* Seletores por atributo para pegar estilos inline comuns e sobrescrever */
+*[style*="background-color: #fff"], *[style*="background-color:#fff"], *[style*="background-color: #fff !important"], *[style*="background-color: #f5ede3"], *[style*="background-color:#f5ede3"] {
+  background-color: #141414 !important;
+}
+*[style*="color: #000"], *[style*="color:#000"], *[style*="color: #000 !important"], *[style*="color:black"] {
+  color: #e6e6e6 !important;
+}
+
+/* Pequenos ajustes visuais */
+.popup-bubble .name, .popup-bubble .username { color: #e6e6e6 !important; }
+
+}
+
+</style>
+
+</head>
 <body>
 <div class="header">
 <img alt="Logo" class="logo" src="https://i.postimg.cc/xdhmTqgw/erasebg-transformed-1.png"/>
@@ -722,5 +1245,37 @@ body {
     });
   });
   </script>
-</div></div></body>
+</div></div>
+<script>
+(function applyDarkInlineFix(){
+  try {
+    const mq = window.matchMedia('(prefers-color-scheme: dark)');
+    function fixOnce(){
+      if (!mq.matches) return;
+      document.querySelectorAll('[style]').forEach(el => {
+        let s = el.getAttribute('style') || '';
+        // Trocar backgrounds claros padrão por escuros
+        s = s.replace(/background-color\s*:\s*#f5ede3\s*!?/ig, 'background-color: #141414 !important');
+        s = s.replace(/background-color\s*:\s*#fff\s*!?/ig, 'background-color: #141414 !important');
+        s = s.replace(/background\s*:\s*#fff\s*!?/ig, 'background-color: #141414 !important');
+        // Trocar cores pretas por claras
+        s = s.replace(/color\s*:\s*#000\s*!?/ig, 'color: #e6e6e6 !important');
+        s = s.replace(/color\s*:\s*black\s*!?/ig, 'color: #e6e6e6 !important');
+        // Ajuste rápido para valores de rgb/rgba comuns (ex: rgba(0,0,0,0.85))
+        s = s.replace(/rgba?\(\s*0\s*,\s*0\s*,\s*0\s*(?:,[^\)]*)?\)\s*!?/ig, 'color: #e6e6e6 !important');
+        el.setAttribute('style', s);
+      });
+    }
+    // Roda uma vez ao carregar e quando houver mudança de preferência
+    window.addEventListener('load', fixOnce);
+    if (mq.addEventListener) mq.addEventListener('change', fixOnce);
+    else if (mq.addListener) mq.addListener(fixOnce);
+    fixOnce();
+  } catch(e) {
+    console.warn('Erro ao aplicar correção de tema escuro:', e);
+  }
+})();
+</script>
+
+</body>
 </html>
